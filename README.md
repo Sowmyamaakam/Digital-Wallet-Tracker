@@ -3,28 +3,20 @@ A web app to track UPI transactions by uploading PhonePe transaction screenshots
 ![Dashboard Screenshot](https://github.com/VaishnaviVadla33/DigitalWalletTracker02/raw/main/Dashboard_image.png)
 
 ## Features
-Screenshot Upload: Upload PhonePe transaction screenshots.
-OCR Extraction: Extracts details (amount, date, time, status, sender/receiver) using Pytesseract.
-Manual Entry/Edit: Review/edit extracted data or manually add transactions.
-Categorization: Tag transactions as Personal, Bills, or Business; add references (Family, Friends, Others).
-Priority Rating: Mark transactions as Necessary, Moderate, or Not Necessary.
-Firestore Storage: Stores credit/debit transactions in separate collections.
-Transaction History: View all transactions in a tabular format.
-Financial Dashboard:
-Line Chart: Credit/debit history over time.
-Bar Chart: Monthly spending comparison across years.
-Doughnut Chart: Inflow vs. Outflow summary.
-Bar Chart: Peak transaction times.
-Insights: Savings suggestions and spending alerts.
+**Screenshot Upload**: Upload PhonePe transaction screenshots.
+**OCR Extraction:** Extracts details (amount, date, time, status, sender/receiver) using Pytesseract.
+**Manual Entry/Edit:** Review/edit extracted data or manually add transactions.
+**Categorization:** Tag transactions as Personal, Bills, or Business; add references (Family, Friends, Others).
+**Priority Rating:** Mark transactions as Necessary, Moderate, or Not Necessary.
+**Firestore Storage:** Stores credit/debit transactions in separate collections.
+**Transaction History:** View all transactions in a tabular format.
+**Financial Dashboard:**
+**Line Chart:** Credit/debit history over time.
+**Bar Chart:** Monthly spending comparison across years.
+**Doughnut Chart:** Inflow vs. Outflow summary.
+**Bar Chart:** Peak transaction times.
+**Insights:** Savings suggestions and spending alerts.
 
-**Tech Stack**
-Backend: Python, Flask
-Database: Firebase Firestore
-OCR: Pytesseract, Pillow
-Data Analysis: Pandas, NumPy, Scikit-learn
-Frontend: HTML, CSS, JavaScript, Chart.js
-Environment: python-dotenv
-Deployment: Gunicorn
 
 ## Prerequisites
 
