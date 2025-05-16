@@ -1,6 +1,7 @@
 # UPI Payments Dashboard
 
 This project is a web-based UPI Payments Dashboard designed to fetch and display user-specific details such as personal information, transactions, income, and more. The dashboard interacts with a MySQL database to retrieve and display data dynamically.
+![Dashboard Screenshot](https://github.com/VaishnaviVadla33/DigitalWalletTracker02/raw/main/Dashboard_image.png)
 
 ## Features
 - **User Authentication**: Allows users to log in and fetch their details using a unique `User ID`.
