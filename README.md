@@ -1,58 +1,77 @@
 # UPI Payments Dashboard
-
-This project is a web-based UPI Payments Dashboard designed to fetch and display user-specific details such as personal information, transactions, income, and more. The dashboard interacts with a MySQL database to retrieve and display data dynamically.
+A web app to track UPI transactions by uploading PhonePe transaction screenshots. It uses OCR to extract details (amount, date, time, sender/receiver) and stores them in Firebase Firestore. Features a financial dashboard with spending insights, cash flow analysis, and savings suggestions.
 ![Dashboard Screenshot](https://github.com/VaishnaviVadla33/DigitalWalletTracker02/raw/main/Dashboard_image.png)
 
 ## Features
-- **User Authentication**: Allows users to log in and fetch their details using a unique `User ID`.
-- **Personal Information Display**: Displays user's name, email, phone number, address, date of birth, gender, and occupation.
-- **Transaction Analysis**:
-  - Total number of transactions.
-  - Maximum expenditure in a single transaction.
-  - Most used transaction platform.
-  - Most common transaction (location, date, and time).
-- **Financial Details**:
-  - Total income from salary and other sources.
-  - Remaining money after expenditure.
-  - Credit and debit details.
-- **Dynamic and Responsive Design**: A user-friendly interface styled with modern CSS.
+Screenshot Upload: Upload PhonePe transaction screenshots.
+OCR Extraction: Extracts details (amount, date, time, status, sender/receiver) using Pytesseract.
+Manual Entry/Edit: Review/edit extracted data or manually add transactions.
+Categorization: Tag transactions as Personal, Bills, or Business; add references (Family, Friends, Others).
+Priority Rating: Mark transactions as Necessary, Moderate, or Not Necessary.
+Firestore Storage: Stores credit/debit transactions in separate collections.
+Transaction History: View all transactions in a tabular format.
+Financial Dashboard:
+Line Chart: Credit/debit history over time.
+Bar Chart: Monthly spending comparison across years.
+Doughnut Chart: Inflow vs. Outflow summary.
+Bar Chart: Peak transaction times.
+Insights: Savings suggestions and spending alerts.
 
-## Technologies Used
-- **Backend**: PHP for server-side scripting.
-- **Database**: MySQL for storing and retrieving user and transaction data.
-- **Frontend**: HTML, CSS, and JavaScript for creating a responsive user interface.
+**Tech Stack**
+Backend: Python, Flask
+Database: Firebase Firestore
+OCR: Pytesseract, Pillow
+Data Analysis: Pandas, NumPy, Scikit-learn
+Frontend: HTML, CSS, JavaScript, Chart.js
+Environment: python-dotenv
+Deployment: Gunicorn
 
 ## Prerequisites
-Before running this project, ensure you have the following installed:
-- PHP 7.0 or higher
-- MySQL 5.7 or higher
-- Web server (e.g., Apache or Nginx)
-- A browser for testing the interface
 
-## Database Setup
-1. Create a database named `upi_payments` in MySQL.
-2. Import the database schema and sample data using the SQL file provided in the project directory (e.g., `upi_payments.sql`).
-3. Ensure the database contains the following tables:
-   - `user_details`: Stores personal information.
-   - `transactions_details`: Stores details of each transaction.
-   - `income_sources`: Stores user income details.
-   - `credit_details`: Stores credit information.
-   - `debit_details`: Stores debit information.
-   - `transaction_methods_platform_details`: Stores transaction platform usage data.
+- **Hardware**:
+  - Computer with 4GB+ RAM, 2GB free disk space.
+  - Internet connection.
 
-## Project Setup
-1. Clone the repository or download the project files.
-2. Place the project folder in your web server's root directory (e.g., `htdocs` for XAMPP).
-3. Open the `config.php` file and update the database connection details:
-   ```php
-   $host = "127.0.0.1";
-   $user = "root";
-   $password = "";
-   $dbname = "upi_payments";
+- **Software**:
+  - OS: Windows, macOS, or Linux.
+  - Python 3.6+ (`python --version`).
+  - Tesseract OCR:
+    - Windows: Install from [Tesseract at UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki).
+    - Linux: `sudo apt-get install tesseract-ocr`.
+    - macOS: `brew install tesseract`.
+  - Git (`git --version`): Install from [git-scm.com](https://git-scm.com/downloads).
+  - Modern web browser (e.g., Chrome).
 
-upi-payments-dashboard/
-│
-├── index.php              # Main entry point for the dashboard
-├── stylesheet.css         # Stylesheet for the frontend design
-├── upi_payments.sql       # Database schema and sample data
-├── README.md              # Project documentation
+- **Development Tools**:
+  - Code editor (e.g., VS Code).
+  - Virtual environment: `python -m venv venv`.
+
+- **Firebase Account**:
+  - Firebase project with Firestore enabled.
+  - Service Account JSON key.
+
+- **Python Dependencies** (via `requirements.txt`):
+  - Flask, Pytesseract, Pillow, Pandas, NumPy, Scikit-learn, Firebase-Admin, python-dotenv, Gunicorn.
+
+- **Setup**:
+  - Firebase config: Set `FIREBASE_CREDENTIALS` in `.env`.
+  - PhonePe transaction screenshots (clear, full).
+
+- **Optional (Deployment)**:
+  - Gunicorn for production.
+  - Hosting platform supporting Python/Tesseract.
+ 
+  ## Live Demo & Conclusion
+
+This application provides a practical way to digitize and analyze your PhonePe transaction history.
+
+You can access a live preview of the website hosted on Render here:
+
+**[Website Preview](https://digitalwallettracker02.onrender.com/)**
+
+**Important Demo Limitation:** Please note that the **OCR/image extraction functionality does not work** in this hosted preview version due to deployment environment limitations (likely related to Tesseract dependencies). The demo primarily showcases the frontend interface, form structure, and dashboard layout.
+
+To experience the full application, including the transaction data extraction, please follow the given setup--installation steps to run it on your local machine.
+
+
+
