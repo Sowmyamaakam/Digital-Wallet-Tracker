@@ -3,19 +3,32 @@ A web app to track UPI transactions by uploading PhonePe transaction screenshots
 ![Dashboard Screenshot](https://github.com/VaishnaviVadla33/DigitalWalletTracker02/raw/main/Dashboard_image.png)
 
 ## Features
-**Screenshot Upload**: Upload PhonePe transaction screenshots.
-**OCR Extraction:** Extracts details (amount, date, time, status, sender/receiver) using Pytesseract.
-**Manual Entry/Edit:** Review/edit extracted data or manually add transactions.
-**Categorization:** Tag transactions as Personal, Bills, or Business; add references (Family, Friends, Others).
-**Priority Rating:** Mark transactions as Necessary, Moderate, or Not Necessary.
-**Firestore Storage:** Stores credit/debit transactions in separate collections.
-**Transaction History:** View all transactions in a tabular format.
-**Financial Dashboard:**
-**Line Chart:** Credit/debit history over time.
-**Bar Chart:** Monthly spending comparison across years.
-**Doughnut Chart:** Inflow vs. Outflow summary.
-**Bar Chart:** Peak transaction times.
-**Insights:** Savings suggestions and spending alerts.
+
+* **Transaction Screenshot Upload:** Upload images (screenshots) of UPI transaction confirmations.
+* **OCR Data Extraction:** Automatically extracts transaction details (amount, date, time, status - credited/debited, sender/receiver) from the uploaded image using Pytesseract.
+* **Manual Data Entry/Edit:** Allows users to review and edit extracted details or manually input transaction data via a form.
+* **Transaction Categorization:** Classify transactions as Personal, Regular Bills, or Business, and add personal references (Family, Friends, Others).
+* **Priority Rating:** Rate transactions based on necessity (Necessary, Moderate, Not Necessary).
+* **Firebase Firestore Integration:** Securely stores credit and debit transaction data in separate Firestore collections.
+* **Transaction History:** View a detailed history of all recorded credit and debit transactions in tabular format.
+* **Financial Dashboard:**
+    * Visualize credit and debit transaction history over time (Line Chart).
+    * Compare monthly spending across different years (Bar Chart).
+    * Analyze cash flow with an Inflow vs. Outflow summary (Doughnut Chart).
+    * Identify peak transaction times (Bar Chart).
+    * Receive potential savings suggestions based on spending categories.
+    * Get alerts for significant spending amounts.
+
+## Technologies Used
+
+* **Backend:** Python, Flask
+* **Database:** Google Firebase Firestore
+* **OCR:** Pytesseract, Pillow (PIL Fork)
+* **Data Analysis:** Pandas, NumPy, Scikit-learn
+* **Frontend:** HTML, CSS, JavaScript
+* **Charting:** Chart.js
+* **Environment Variables:** python-dotenv
+* **Deployment (Implied):** Gunicorn (listed in requirements)
 
 
 ## Prerequisites
